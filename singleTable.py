@@ -23,8 +23,6 @@ synthetic_data = synthesizer.sample(
     num_rows=10
 )
 
-synthesizer.
-
 print(synthetic_data.head())
 
 
