@@ -54,13 +54,14 @@ def loadCsvData():
 
 def updateTransformers(synthesizer):
     transformers = synthesizer.get_transformers(table_name='accountNotes')
-    t = transformers['notes']
-    t.enforce_uniqueness=True
-    t.max_nb_chars=2000
+    transformers['notes'].enforce_uniqueness=True
+    transformers['notes'].function_kwargs={'max_nb_chars': 2000}
     transformers = synthesizer.get_transformers(table_name='callTranscript')
     transformers['transcript'].enforce_uniqueness=True
+    transformers['transcript'].function_kwargs={'max_nb_chars': 2000}
     transformers = synthesizer.get_transformers(table_name='account')
     transformers['notes'].enforce_uniqueness=True
+    transformers['notes'].function_kwargs={'max_nb_chars': 2000}
 
     addressTransformer = AnonymizedFaker(provider_name='address', function_name='address', enforce_uniqueness=True)
     synthesizer.update_transformers(table_name='account', column_name_to_transformer={'address': addressTransformer})
