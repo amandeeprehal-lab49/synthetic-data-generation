@@ -19,7 +19,7 @@ def setupCallTranscriptMetadata(metadata):
     metadata.update_column(table_name='callTranscript', column_name='id', sdtype='id')
     metadata.set_primary_key(table_name='callTranscript', column_name='id');
     metadata.update_column(table_name='callTranscript', column_name='accountContactId', sdtype='id')
-    metadata.update_column(table_name='callTranscript', column_name='transcript', sdtype='text')
+    # metadata.update_column(table_name='callTranscript', column_name='transcript', sdtype='text')
 
 def setupAccountContactMetadata(metadata):
     metadata.update_column(table_name='accountContact', column_name='id', sdtype='id')
@@ -57,8 +57,8 @@ def updateTransformers(synthesizer):
     transformers['notes'].enforce_uniqueness=True
     transformers['notes'].function_kwargs={'max_nb_chars': 2000}
     transformers = synthesizer.get_transformers(table_name='callTranscript')
-    transformers['transcript'].enforce_uniqueness=True
-    transformers['transcript'].function_kwargs={'max_nb_chars': 2000}
+    transformers['transcript'].enforce_uniqueness=False
+    # transformers['transcript'].function_kwargs={'max_nb_chars': 2000}
     transformers = synthesizer.get_transformers(table_name='account')
     transformers['notes'].enforce_uniqueness=True
     transformers['notes'].function_kwargs={'max_nb_chars': 2000}
@@ -95,7 +95,7 @@ def main():
     synthesizer.fit(datasets)
     updateTransformers(synthesizer)
     synthesizer.fit(datasets)
-    synthetic_data = synthesizer.sample(scale=5)
+    synthetic_data = synthesizer.sample(scale=0.5)
     writeResultToFile(RESULT_FILE_PATH, synthetic_data)
     print('*************** Check result in ./data/result *********************')
 

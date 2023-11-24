@@ -1,4 +1,28 @@
 id,accountContactId,transcript
-2001,1,This is a dummy transcript
-2002,2, Another dummy transcript
-2003,3,Testing transcript
+2001,1,"Financial Advisor: I must express my dissatisfaction with the recent performance of your funds. My clients expect better returns.
+
+Fund House Representative: We understand your concerns  but the market has been volatile recently. 
+
+Financial Advisor: That's not an acceptable excuse. Other funds are managing to deliver despite the volatility. 
+
+Fund House Representative: We are working on strategies to improve the performance. 
+
+Financial Advisor: I hope to see significant improvements soon  or I'll have to reconsider recommending your funds to my clients."
+2002,2,"Financial Advisor: Good day. I am reaching out on behalf of my client who is interested in your mutual fund offerings. Could you provide some detailed information about your top-performing funds?
+
+Fund House Representative: Certainly  I'd be happy to assist. Our top-performing funds currently are the ABC Equity Fund and the XYZ Balanced Fund. Both have consistently outperformed their respective benchmarks over the past five years.
+
+Financial Advisor: That sounds promising. Could you provide more specifics on the risk profiles and investment strategies of these funds?
+
+Fund House Representative: Absolutely. The ABC Equity Fund is a high-risk  high-return fund that primarily invests in growth-oriented stocks. The XYZ Balanced Fund  on the other hand  is a moderate-risk fund that maintains a balanced portfolio of equities and fixed-income securities.
+
+Financial Advisor: Thank you for the information. I will review these details with my client and get back to you if we decide to proceed with the investment."
+2003,3,"Financial Advisor: Hello there  I'm trying to find a fund that's as reliable as my old car. It's been running for 20 years without a hiccup!
+
+Fund House Representative: Well  we can't promise a fund that runs on gasoline  but we do have some that have been performing consistently for decades!
+
+Financial Advisor: That sounds promising! But can they also play my favorite 80s music like my car does?
+
+Fund House Representative: I'm afraid our funds can't play music  but they can certainly make your portfolio dance to a profitable tune!
+
+Financial Advisor: Well  as long as they don't do the cha-cha slide with my client's money  we should be good!"
